@@ -18,11 +18,11 @@ leveraging JNA to provide a seamless interface to the FMOD Core API.
 - Audio playback and streaming
 - Real-time DSP effects (Chorus, Compressor, EQ, FFT, etc.)
 - Channel and ChannelGroup management
-- Memory management with auto-cleanup
 
 ### Partially Implemented:
-- 3D Audio (basic support)
-- Plugin system (basic structure in place)
+- 3D Audio (structure-wise, not code wise)
+- Plugin system (structure-wise, not code wise)
+- Memory management (cases which make NPEs or cause potential VM crashes can easily be made)
 
 ### Not Yet Implemented:
 - Recording functionality
