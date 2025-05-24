@@ -1,0 +1,37 @@
+package io.github.biglipbob.FMOD;
+
+import java.lang.ref.Cleaner;
+import com.sun.jna.Pointer;
+
+import static io.github.biglipbob.FMOD.FMODConstants.FMOD_OK;
+import static io.github.biglipbob.FMOD.FMOD.*;
+
+/**
+ * The {@code FMODSoundGroup} class owns an FMOD sound group.
+ * <p>
+ * Unlike {@link FMODSoundGroupRef}, this class owns the FFI sound group instance and will manage its memory release.
+ * It allows volume adjustments, limits, and shared properties among sounds.
+ * </p>
+ *
+ * <p>For more details, refer to the FMOD SoundGroup API documentation:
+ * <a href="https://www.fmod.com/docs/2.03/api/core-api-soundgroup.html">FMOD SoundGroup API</a>
+ * </p>
+ */
+public class FMODSoundGroup extends FMODSoundGroupRef implements AutoCloseable {
+    final Cleaner.Cleanable cleanable;
+
+    FMODSoundGroup(Pointer ptr) {
+        super(ptr);
+        cleanable = CLEANER.register(this, () -> release(ptr));
+    }
+
+    private static void release(Pointer ptr) {
+        int result = CALL.FMOD_SoundGroup_Release(ptr);
+        if (result != FMOD_OK) throw new FMODException("FMOD_SoundGroup_Release", result);
+    }
+
+    /// Releases the memory for the object.
+    @Override public void close() {
+        cleanable.clean();
+    }
+}
