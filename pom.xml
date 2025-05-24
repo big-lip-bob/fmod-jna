@@ -22,16 +22,19 @@
     </licenses>
 
     <developers>
+
         <developer>
             <id>big-lip-bob</id>
             <name>BigLipBob</name>
             <email>41026257+big-lip-bob@users.noreply.github.com</email>
         </developer>
+
         <developer>
             <id>sincos</id>
             <name>Sincos</name>
             <email>optik@koolkdzonly.club</email>
         </developer>
+
     </developers>
 
     <scm>
@@ -48,11 +51,13 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <version>5.16.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
@@ -60,9 +65,11 @@
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
+
     </dependencies>
 
     <profiles>
+
         <profile>
             <id>deployment</id>
             <build>
@@ -130,6 +137,7 @@
                 </plugins>
             </build>
         </profile>
+
     </profiles>
 
 </project>
