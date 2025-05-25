@@ -35,7 +35,7 @@ leveraging JNA to provide a seamless interface to the FMOD Core API.
 
 ```xml
 <dependency>
-    <groupId>io.github.biglipbob</groupId>
+    <groupId>io.github.big-lip-bob</groupId>
     <artifactId>fmod-jna</artifactId>
     <version>0.0.1</version>
 </dependency>
