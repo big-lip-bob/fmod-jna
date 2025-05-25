@@ -2,7 +2,7 @@
 
 Cross-platform Java wrapper for the FMOD audio engine using JNA.
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.biglipbob/fmod-jna.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.github.biglipbob/fmod-jna)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.big-lip-bob/fmod-jna.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.github.big-lip-bob/fmod-jna)
 [![License](https://img.shields.io/github/license/big-lip-bob/fmod-jna.svg?label=License)](LICENSE)
 [![Java Version](https://img.shields.io/badge/Java-24-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk24-archive-downloads.html)
 [![JNA Version](https://img.shields.io/maven-central/v/net.java.dev.jna/jna.svg?label=JNA)](https://mvnrepository.com/artifact/net.java.dev.jna/jna)
